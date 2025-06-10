@@ -1,0 +1,319 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.front {
+  background-image: url("angryimg.jpg");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Ensures it takes the full width of the div */
+  height: 85vh; /* Ensures it takes the full height of the div */
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.real {
+  display: flex;
+}
+
+.real > p {
+  margin-left: 20px;
+}
+
+.headImage {
+  background-image: url("https://framerusercontent.com/images/skOT22fHU6rykNQ4pP3hbjKTIq4.png?scale-down-to=1024&lossless=1");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Ensures it takes the full width of the div */
+  height: 70vh; /* Ensures it takes the full height of the div */
+}
+
+.headContent {
+  justify-content: right;
+  padding-top: 150px;
+}
+
+.big {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .big {
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ball {
+    margin-left: 20px;
+  }
+}
+
+.bigs {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 200px;
+}
+
+.bigs2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 50px;
+}
+
+.bigs3 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 100px;
+}
+
+.semi {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .semi {
+    padding-top: 100px;
+    padding-left: 20px;
+  }
+}
+.semi2 {
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background-color: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+.discover {
+  justify-content: center;
+}
+
+.reviewSlide {
+  display: flex;
+  animation: 50s slide infinite linear;
+}
+
+.reviewSlide2 {
+  display: flex;
+  animation: 50s slide2 infinite linear;
+}
+
+.reviewSlide .img {
+  margin-left: 35px;
+}
+
+.reviewSlide2 .img {
+  margin-left: 35px;
+  margin-bottom: 100px;
+}
+
+.reviewOne {
+  overflow: hidden;
+  padding: 15px 0;
+  white-space: wrap;
+  position: relative;
+}
+
+.reviewOne::before,
+.reviewOne::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.reviewOne::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.reviewOne::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+@keyframes slide2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Reset default margins and paddings for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the main FAQ container */
+.faq-container {
+  max-width: 800px; /* Limit the width for better readability */
+  margin: 100px auto; /* Center the container and add vertical spacing */
+  padding: 20px;
+  color: #333; /* Base text color */
+}
+
+/* Style for the main title */
+.faq-container h1 {
+  margin-bottom: 40px;
+  color: #2c3e50; /* Dark blue color for the title */
+  font-size: 50px;
+}
+.faq-container p {
+  margin-bottom: 40px;
+  color: #2c3e50; /* Dark blue color for the title */
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+/* Style for each FAQ item */
+.faq-item {
+  /* Light gray border between items */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+/* Style for the question buttons */
+.faq-question {
+  background-color: #ecf0f1; /* Light gray background */
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+  margin-bottom: 10px;
+}
+
+/* Hover effect for question buttons */
+.faq-question:hover {
+  background-color: #d0d7de; /* Slightly darker gray on hover */
+}
+
+/* Style for the arrow icon */
+.faq-question .arrow {
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease; /* Smooth rotation transition */
+}
+
+/* Rotate the arrow when the question is active (expanded) */
+.faq-question.active .arrow {
+  transform: rotate(180deg); /* Rotate arrow 180 degrees */
+}
+
+/* Style for the answer sections */
+.faq-answer {
+  max-height: 0; /* Initially hide the answer */
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth transition for expanding */
+  background-color: #fff; /* White background for answers */
+}
+
+/* Style for the answer text */
+.faq-answer p {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5; /* Increase line height for better readability */
+  color: #555; /* Slightly lighter text color for answers */
+}
+
+.retto {
+  background-image: url("https://framerusercontent.com/images/06rJd5sKHjmEQdmcgFghvVrOJ4.png?lossless=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Ensures it takes the full width of the div */
+  height: 40vh; /* Ensures it takes the full height of the div */
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imaging {
+  width: 400px;
+  height: 400px;
+  margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
